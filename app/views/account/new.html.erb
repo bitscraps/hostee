@@ -1,0 +1,29 @@
+<h1>Create a new account:</h1>
+
+
+
+<% form_for :account do |account| %>
+<%= account.error_messages %>
+
+<%= account.label :username %>
+<%= account.text_field :username %><br>
+
+<%= account.label :password %>
+<%= account.text_field :password %><br>
+
+
+<%= account.label :first_name %>
+<%= account.text_field :first_name %> <%= account.text_field :surname %><br>
+
+<%= account.label :email %>
+<%= account.text_field :email %><br>
+
+
+<%= account.radio_button :account_type, "Monthly" %> Monthly
+<%= account.radio_button :account_type, "Yearly" %> Yearly
+<br>
+
+<%= account.submit "Create Account" %>
+<% end %>
+
+<%= params[:message] %>

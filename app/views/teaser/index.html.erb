@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<%= javascript_include_tag "cufon" %>
+	<%= javascript_include_tag "fonts/Mensch_400.font.js" %>
+	<script type="text/javascript">
+		Cufon.replace('h1'); // Works without a selector engine
+		Cufon.replace('h2'); // Requires a selector engine for IE 6-7, see above
+		Cufon.replace('p');
+	</script>
+
+	<title>Hostee | Easy Domain &amp; Hosting Billing Cycle Management</title>
+
+	<%= stylesheet_link_tag "teaser" %>
+	
+</head>
+
+<body>
+
+	<div id="branding">
+		<img src="/images/hostee.png" border="0"  align=center style="margin:auto; align:center;">
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+			<h1>Fast and easy domain and hosting billing management</h1>
+			
+			<p>
+				Keeping track of all your clients domains and hosting cycles can be a bit of a pain. Hostee is being designed to change that.<br>Hostee will keep on top of all your billing cycles and manage them for you, leaving you more time to do the things you enjoy
+			</p>
+			
+			<% if @saved != true %>
+				<p>Are you as excited as we are about Hostee.  <br>Join our mailing list and we'll let you know the instant it's ready</p>
+				
+				<% form_for :maillist do |list| %>
+					<input type=search name="maillist[email]" id="maillist_email" value="" placeholder="Enter your e-mail address" style="text-align:center;width:300px; font-size:16px;"><br>
+					<input type=submit value="Let me know when it's ready" class="action-button" onmousedown="this.className='action-button-focus'" onmouseup="this.className='action-button'" onmouseout="this.className='action-button'">
+				<% end %>
+				</div><!-- #wrapper -->
+			<% else %>
+				<p style="font-size:24px">Now we have your email we will let you know as soon as its ready</p>
+			<% end %>
+	</div>
+	
+	<div id="footer" style="width:100%;">
+		<div>
+			<h2>Follow Us Via: <a href="http://www.twitter.com/hosteeapp"><img src="/images/twittericon.png" style="display:inline;padding-top:5px;"> Twitter</a> <a href="http://blog.hosteeapp.co.uk"><img src="/images/wordpress-icon.png" style="display:inline;padding-top:5px;"> Blog</a> </h2> 
+			<h2>Copyright 2011</h2>
+		</div>
+	</div>
+
+
+	<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
