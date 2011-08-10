@@ -58,6 +58,12 @@ input {
 margin-top:10px;
 }
 
+input[type=search] {
+	-moz-border-radius:12px;
+	border-radius:12px;
+	behavior:url(/stylesheets/PIE.htc);
+}
+
 .action-button {
 	background-image:url(/images/action-button.png);
 	border:0px;
