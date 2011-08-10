@@ -52,7 +52,10 @@ img { border:0;}
 	background-repeat: repeat-x;
 }
 
-form {margin-top:20px;margin-bottom:40px;}
+#main {
+}
+
+form {margin-top:20px;}
 
 input {
 margin-top:10px;
