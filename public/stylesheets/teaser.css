@@ -8,6 +8,7 @@ html, body {
 
 a {
 	color:#444444;
+	text-decoration:none;
 }
 
 h1 {
@@ -27,6 +28,8 @@ p {
 	color:#444444;
 }
 
+img { border:0;}
+
 #branding {
 	margin-top:50px;
 	margin-bottom:30px;
@@ -44,7 +47,6 @@ p {
 	overflow:hidden;
 	position:absolute;
 	text-align:center;
-	bottom:0px;
 	background-image:url(/images/bottom-gradient.png);
 	background-repeat: repeat-x;
 }
