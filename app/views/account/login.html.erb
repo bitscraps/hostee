@@ -1,0 +1,20 @@
+<div style="width:300px;" id="signup-form">
+			
+
+			<% form_remote_tag do |form| %>
+				<%= label_tag :username %>
+				<%= text_field_tag :username %>
+				
+				<%= label_tag :password %>
+				<%= password_field_tag :password %>
+				<center>
+					<%= check_box_tag :keep_me_signed_in %> <label for="keep_me_signed_in" style="display:inline;display:cursor;">Keep Me Signed In</label>
+				</center>	
+				<center><%= submit_tag 'Log Me In', :class => "action-button" %></center>
+			<% end %>
+			<br><br>
+			<div style="text-align:center;margin-top:10px;font-family:Arial;font-size:12px;">
+				<%= link_to "I don't have a Hostee account", {:controller => 'account', :action => 'signup'}, :class => "lightbox" %><br>
+				<%= link_to "I've forgotten my password" %>
+			</div>
+</div>

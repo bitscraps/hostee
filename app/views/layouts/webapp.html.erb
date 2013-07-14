@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+
+	<%= stylesheet_link_tag "webapp" %>
+	
+	<%= stylesheet_link_tag "jquery.fancybox-1.3.4" %>
+	<link rel="stylesheet" href="/stylesheets/slidedeck.skin.css" type="text/css" media="screen">
+	
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+	<%= javascript_include_tag 'jrails', 'jquery-ui', 'jquery.easing.js', 'jquery.fancybox-1.3.4.pack', 'jquery.utils.min', 'application' %>
+	<%= javascript_include_tag "cufon", "fonts/MenschBold_700.font.js" %>
+	
+	<script type="text/javascript">
+		Cufon.replace('h1'); // Works without a selector engine
+		Cufon.replace('h2'); // Requires a selector engine for IE 6-7, see above
+		Cufon.replace('#nav ul li');
+		Cufon.replace('#nav button');
+		</script>
+
+	<title>Hostee | Dashboard</title>
+
+
+</head>
+
+<body>
+	
+	
+	<div id="nav">
+		<ul class=tabs>
+			<li <% if params[:controller] == 'dashboard' %>class=selected<% end %>>
+				<%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %>
+			</li>
+			<li <% if params[:controller] == 'domains' %>class=selected<% end %>>
+				<%= link_to "Domains" %>
+			</li>
+			<li <% if params[:controller] == 'plans' %>class=selected<% end %>><%= link_to "Plans" %></li>
+			<li <% if params[:controller] == 'clients' %>class=selected<% end %>>
+				<%= link_to "Clients", :controller => 'clients', :action => 'index' %>
+			</li>
+			
+		</ul>
+		<div class=right>
+			<%= link_to "<button>Settings</button>" %>
+			<%= link_to "<button>Logout</button>", :controller => 'account', :action => 'logout' %>
+		</div>
+	</div>
+	
+	<div id="main">
+		<div id="content">
+			<%= yield %>
+		</div>
+		<div id="secondary-menu">
+			<%= render :partial => "#{params[:controller]}/secondary_menu" %>
+		</div>
+		<div id="clear:both;"></div>
+	</div>
+	
+	<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

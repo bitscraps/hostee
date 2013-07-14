@@ -1,0 +1,21 @@
+<% if @clients && @clients.size > 0 %>
+	<% @clients.each do |client| %>
+		<div class="client" style="">
+			<div id="image" style="width:80px;height:80px;float:left;border:0px SOLID #555555;color:#555555; text-align:center;-webkit-border-radius:10px;-webkit-box-shadow:inset 1px 1px 5px #333;z-index:10;
+				<% if client.logo && client.logo != '' %>
+					background-image:url(/images/avatar/<%=client.logo%>);">
+				
+					
+				<% else %>
+					"><div style="width:50px; height:50px;font-size:50px;border:0px SOLID #555555;color:#555555; text-align:center;padding:15px;-webkit-border-radius:10px;-webkit-box-shadow:inset 1px 1px 5px #333;background-color:#ECECEC">?</div>
+				<% end %>
+			</div>
+			<div style="float:left;margin-left:20px;text-shadow:#fff 0px 1px 0">
+				<%= client.company %><br>
+				<%= client.name %>
+			</div>
+		</div>
+	<% end %>
+<% else %>
+	<p>Your client list is empty. <%= link_to 'Create', {:controller => 'clients', :action => 'create'}, :style => 'text-decoration:underline;color:#333333', :class => 'lightbox' %>  your first client to get started</p>
+<% end %>

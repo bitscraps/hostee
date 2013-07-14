@@ -1,2 +1,16 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+
+		$(document).ready(function() {
+
+	
+			$(".lightbox").fancybox({
+				'transitionIn'	:	'elastic',
+				'transitionOut'	:	'elastic',
+				'speedIn'		:	600, 
+				'speedOut'		:	200, 
+				'overlayShow'	:	true,
+				'padding'		: 	20,
+				'autodimensions':	true,
+				'scrolling'		:	'no'
+			});
+	
+		});

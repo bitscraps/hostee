@@ -1,0 +1,36 @@
+<div id="slider" class="skin-slidedeck">			
+	<dl class="slidedeck">
+		<dt>Introducting Hostee</dt>
+		<dd>Slide content</dd>
+	
+		<dt>Easy to Use</dt>
+		<dd>Slide content</dd>
+				
+		<dt>stay informed</dt>
+		<dd>Slide content</dd>
+		
+		<dt>Never miss</dt>
+		<dd>Slide content</dd>
+	</dl>
+</div>
+
+<script type="text/javascript">
+	$('.slidedeck').slidedeck();
+</script>
+		
+<div id="" style="margin-top:30px;">
+	<%= link_to '<button class="action-button" style="margin-right:40px;">
+		<span style="margin:0px;margin-top:10px;width:100%;color:#FFFFFF;">
+			<strong>TRY IT FREE FOR 14 DAYS</strong><br>
+			<span style="font-weight:normal; font-size:12px;">No Credit Card Needed</span>
+		</span>
+	</button>', {:controller=> 'account', :action => 'signup'}, :class => 'lightbox' %>
+	<button class="action-button">
+		<span style="margin:0px;width:100%;color:#FFFFFF;">TAKE THE TOUR<br>
+			<span style="font-weight:normal; font-size:12px;">Find out how it works</span>
+		</span>
+	</button>
+
+</div>
+
+<div id="clear:both;"></div>

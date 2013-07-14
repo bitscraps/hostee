@@ -9,18 +9,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110808103653) do
+ActiveRecord::Schema.define(:version => 20110824110007) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "first_name"
-    t.string   "surname"
-    t.string   "password"
     t.string   "username"
+    t.string   "password"
+    t.string   "name"
     t.string   "email"
+    t.string   "verification"
     t.string   "account_type"
-    t.datetime "expires_at"
+    t.date     "expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "email"
+    t.string   "telephone"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "logo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "maillists", :force => true do |t|

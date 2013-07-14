@@ -1,0 +1,46 @@
+<div style="width:630px;">
+	<% remote_form_for :client do |client| %>
+
+		<div style="width:430px;float:left;">
+			<%= client.label :company %>
+			<%= client.text_field :company %>
+
+
+			<%= client.label :name %>
+			<%= client.text_field :name %>
+			<br><br>
+			<%= client.label :email %>
+			<%= client.text_field :email %>
+			
+			<%= client.label :telephone %>
+			<%= client.text_field :telephone %>
+			<br><br>
+			<%= client.label :address1 %>
+			<%= client.text_field :address1 %>
+			<div style="height:2px;margin-top:5px;"></div>
+			<%= client.text_field :address2 %>
+			
+			<%= client.label :city %>
+			<%= client.text_field :city %>
+			
+			<%= client.label :state %>
+			<%= client.text_field :state %>
+			
+			<%= client.label :zip %>
+			<%= client.text_field :zip %>
+			
+		</div>
+		<div style="width:180px;float:left;margin-right:10px;">
+			<div style="width:180px;height:180px;border:1px SOLID #888888;background-color:#EEEEEE;">
+			
+			</div>
+		</div>
+		
+		<div style="clear:both; width:100%; text-align:center;padding-top:20px;margin-bottom:20px">
+			
+		<%= submit_tag 'Create Client', :class => 'button' %> or <a href="#" style="text-decoration:underline;" onclick="$.fancybox.close();">cancel</a>
+		</div>
+	<% end %>
+	
+	
+</div>
